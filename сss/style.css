@@ -111,10 +111,10 @@ a {
   display: flex;
   margin-left: auto;
 }
-.head-address-button:not(:last-child) {
+.head-address-link:not(:last-child) {
   margin-right: 30px;
 }
-.head-address-button {
+.head-address-link {
   display: block;
   border: none;
   background-color: var(--text-button);
