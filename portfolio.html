@@ -29,11 +29,16 @@
         </nav>
         <address class="head-address">
           <button class="head-adress-button">
-            <svg class="head-adress-icon email"><use href=""></use>
+            <svg class="head-adress-icon email"><use href="./icons/sprite.svg#icon-mail"></use>
             </svg>
             info@devstudio.com
           </button>
-          <a href="" class="head-link">tel:+380961111111</a>
+          <button class="head-address-button">
+            <svg class="head-address-icon phone">
+              <use href="./icons/sprite.svg#icon-phone"></use>
+            </svg>
+            tel:+380961111111
+          </button>
         </address>
       </div>
     </header>
@@ -75,7 +80,7 @@
             <div class="card"> <img class="card-image" src="./img-portfoglio/computer.jpg" width="370" height="294" alt="Технокряк"/>
               <div class="card-content">
                 <h3 class="title-post">Технокряк</h3>
-                <p class="team-work">Веб-сайт</p>
+                <p class="team-work card-text">Веб-сайт</p>
               </div>
             </div>
           </li>
@@ -84,7 +89,7 @@
               />
               <div class="card-content">
                 <h3 class="title-post">Постер New Orlean vs Golden Star</h3>
-                <p class="team-work">Дизайн</p>
+                <p class="team-wor card-text">Дизайн</p>
               </div>
             </div>
           </li>
@@ -93,7 +98,7 @@
               />
               <div class="card-content">
                 <h3 class="title-post">Ресторан Seafood</h3>
-                <p class="team-work">Приложение</p>
+                <p class="team-work card-text">Приложение</p>
               </div>
             </div>
           </li>
@@ -102,7 +107,7 @@
               <img class="card-image" src="./img-portfoglio/headphones.jpg" width="370" height="294" alt="наушники"
               <div class="card-content">
                 <h3 class="title-post">Проект Prime</h3>
-                <p class="team-work">Маркетинг</p>
+                <p class="team-work card-text">Маркетинг</p>
               </div>
             </div>
           </li>
@@ -112,7 +117,7 @@
               />
               <div class="card-content">
                 <h3 class="title-post">Проект Boxes</h3>
-                <p class="team-work">Приложение</p>
+                <p class="team-work card-text">Приложение</p>
               </div>
             </div>
           </li>
@@ -122,7 +127,7 @@
               />
               <div class="card-content">
                 <h3 class="title-post">Inspiration has no Borders</h3>
-                <p class="team-work">Веб-сайт</p>
+                <p class="team-work card-text">Веб-сайт</p>
               </div>
             </div>
           </li>
@@ -132,7 +137,7 @@
               />
               <div class="card-content">
                 <h3 class="title-post">Издание Limited Edition</h3>
-                <p class="team-work">Дизайн</p>
+                <p class="team-work card-text">Дизайн</p>
               </div>
             </div>
           </li>
@@ -142,7 +147,7 @@
               />
               <div class="card-content">
                 <h3 class="title-post">Проект LAB</h3>
-                <p class="team-work">Маркетинг</p>
+                <p class="team-work card-text">Маркетинг</p>
               </div>
             </div>
           </li>
@@ -152,7 +157,7 @@
               />
               <div class="card-content">
                 <h3 class="title-post">Growing Business</h3>
-                <p class="team-work">Приложение</p>
+                <p class="team-work card-text">Приложение</p>
               </div>
             </div>
           </li>
@@ -179,20 +184,37 @@
         <div class="footer-social-link">
           <span class="footer-text"><b>ПРИСОЕДЕНЯЙТЕСЬ</b></span>
           <ul class="social-list">
-            <li>
-              <a href="" aria-label="Instagram" class="link">Instagram</a>
-            </li>
-            <li><a href="" aria-label="Twitter" class="link">Twitter</a></li>
-            <li><a href="" aria-label="Facebook" class="link">Facebook</a></li>
-            <li><a href="" aria-label="LinkedIn" class="link">LinkedIn</a></li>
+            <li class="social-list-item"><a href="" aria-label="Instagram" class="social-list-item-link">
+              <svg class="social-list-item-link footer-svg">
+                <use href="./icons/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a></li>
+            <li class="social-list-item"><a href="" aria-label="Twitter" class="social-list-item-link">
+              <svg class="social-list-item-link footer-svg">
+                <use href="./icons/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a></li>
+            <li class="social-list-item"><a href="" aria-label="Facebook" class="social-list-item-link">
+              <svg class="social-list-item-link footer-svg">
+                <use href="./icons/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a></li>
+            <li class="social-list-item"><a href="" aria-label="LinkedIn" class="social-list-item-link">
+              <svg class="social-list-item-link footer-svg">
+                <use href="./icons/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </a></li>
           </ul>
         </div>
         <div>
           <div>
             <span class="footer-text"><b>ПОДПИШИТЕСЬ НА РАССЫЛКУ</b></span>
           </div>
-          <div>
-            <button class="button primary">Подписаться</button>
+          <div class="button-icon-send">
+            <button class="button primary">Подписаться<svg class="icon-send-svg">
+              <use href="./icons/sprite.svg#icon-icon-send"></use>
+            </svg>
+            </button>
           </div>
         </div>
       </div>
