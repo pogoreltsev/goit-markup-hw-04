@@ -111,23 +111,21 @@ a {
   display: flex;
   margin-left: auto;
 }
-.head-link {
-  font-style: normal;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--primary-text-color);
-
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-.head-link:not(:last-child) {
+.head-address-button:not(:last-child) {
   margin-right: 30px;
 }
-
-.head-link:hover,
-.head-link:focus {
-  color: var(--accent-text-color);
+.head-address-button {
+  display: block;
+  border: none;
+  background-color: var(--text-button);
+  color: var(--primary-text-color);
+  border-style: none;
+  padding: unset;
+  cursor: pointer;
+  outline: none;
+}
+.head-address-button:hover .head-address-icon {
+  fill: var(--accent-text-color);
 }
 
 /*Оформление секции Hero*/
@@ -140,6 +138,17 @@ a {
   padding-right: 15px;
 
   background-color: grey;
+  background-image: linear-gradient(
+    rgba(47, 48, 58, 0.8),
+    rgba(47, 48, 58, 0.8) ),
+    url(../img/Header/Hero_opt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-title {
@@ -157,21 +166,30 @@ a {
   padding: 10px 32px;
   border: none;
   border-radius: 4px;
-  /* min-width: 200px; */
+  min-width: 200px;
   height: 50px;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;
+  cursor: pointer;
+  border: none;
+  border-style: none;
+  outline: none;
 
   color: var(--text-button);
   background-color: var(--accent-text-color);
 }
+
 .button.primary {
   text-align: center;
   color: var(--text-button);
   background-color: var(--accent-text-color);
   margin-top: 30px;
+}
+.button.primary:hover {
+  background: #188ce8;
+  box-shadow: 0 px 4px 4px rgba(0, 0, 0, 0, 0.15);
 }
 .button.secondary {
   color: var(--title-text-color);
@@ -186,13 +204,12 @@ a {
 /*Оформление секции Наше преимущество*/
 .advantage {
   padding-top: 94px;
-
-  /* outline: 1px solid crimson; */
 }
-.list {
+
+.advantage-list {
   display: flex;
 }
-.container .icon {
+.container .card {
   margin-right: 30px;
 }
 .hide-title {
@@ -212,7 +229,7 @@ a {
   margin-right: 30px;
 }
 
-.icon {
+.icon-card {
   width: 270px;
   height: 120px;
   border-radius: 4px;
@@ -221,11 +238,15 @@ a {
   justify-items: center;
   background-color: #f5f4fa;
 }
-.list h3 {
+.advantage-list h3 {
   padding-top: 30px;
 }
-.list p {
+.advantage-list p {
   padding-top: 10px;
+}
+.icon-card .icon {
+  width: 70px;
+  height: 70px;
 }
 
 /*Оформление секции Чем мы занимаемся*/
@@ -304,9 +325,16 @@ a {
 .team-work {
   font-size: 16px;
   font-weight: 400;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  padding-right: 24px;
+  padding-left: 24px;
 }
 .our-team-card:not(:last-child) {
   margin-right: 30px;
+}
+.social-list-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .our-team h3 {
@@ -318,16 +346,24 @@ a {
 .social-list {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-top: 16px;
   padding-bottom: 24px;
 }
-.social-list > link {
-  display: block;
+.social-list-item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
 }
-
-.social-list .link:hover,
-.social-list .link:focus {
-  color: var(--accent-text-color);
+.social-list-item-link:hover {
+  background-color: var(--accent-text-color);
+}
+.social-list-item-link:hover .social-list-item-link-svg {
+  fill: var(--text-button);
 }
 
 .our-team .link:last-child {
@@ -345,7 +381,7 @@ a {
   text-align: center;
 }
 
-.box .link {
+.box .box-link {
   display: block;
   width: 170px;
   height: 90px;
@@ -361,6 +397,36 @@ a {
 
 .box:not(:last-child) {
   margin-right: 30px;
+}
+.box-link-svg {
+  fill: #afb1b8;
+}
+.first-logo {
+  width: 45px;
+  height: 49px;
+}
+.second-logo {
+  width: 40px;
+  height: 52px;
+}
+.third-logo {
+  width: 45px;
+  height: 49px;
+}
+.fourth-logo {
+  width: 80px;
+  height: 42px;
+}
+.fifth-logo {
+  width: 59px;
+  height: 47px;
+}
+.sixth-logo {
+  width: 89px;
+  height: 46px;
+}
+.box-link:hover .box-link-svg {
+  fill: var(--accent-text-color);
 }
 
 /*Стилизация Fotter*/
@@ -421,6 +487,20 @@ a {
   padding-top: 72px;
   color: var(--text-button);
 }
+.footer-svg {
+  fill: var(--text-button);
+}
+.footer-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.icon-send-svg {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  vertical-align: middle;
+  fill: var(--text-button);
+}
 
 /*Стилизация portfolio.html*/
 .portfolio-list h3 {
@@ -457,9 +537,6 @@ a {
 }
 .flex-elements {
   width: 370px;
-}
-
-.flex-elements {
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -479,17 +556,6 @@ a {
   line-height: 2;
   letter-spacing: 0.06em;
 }
-
-.team-work {
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.03em;
-  padding-top: 4px;
-  padding-right: 24px;
-  padding-bottom: 20px;
-  padding-left: 24px;
-}
-
 .card {
   width: 370px;
   height: 404px;
@@ -501,8 +567,17 @@ a {
 .card-image {
   display: block;
 }
+.card-text {
+  padding-bottom: 20px;
+}
 .card-content {
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
+}
+.choose {
+  min-width: 73px;
+  height: 38px;
+  padding: 6px 22px;
+  outline: none;
 }
