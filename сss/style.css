@@ -87,15 +87,16 @@ a {
 .page-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-
-.site-nav .link {
+/*.site-nav .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   height: 80px;
 
   color: var(--title-text-color);
+}
 }
 
 .site-nav .link:hover,
@@ -104,42 +105,48 @@ a {
 }
 .site-nav .link.current {
   color: var(--accent-text-color);
-}
+} */
 
 /*Оформление адреса*/
-.head-address {
+.header-util {
   display: flex;
-  margin-left: auto;
 }
 
-.head-address-button:not(:last-child) {
-  margin-right: 30px;
+.contacts-list {
+  display: flex;
 }
 
-.head-address-icon {
-  width: 16px;
-  height: 12px;
+.contacts-list-item:not(:last-child) {
+ margin-right: 30px;
+}
+
+.menunav-links,
+.contacts-links-item {
+  margin-left: 30px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-style: normal;
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.contacts-links {
+  display: flex;
+  align-items: center;
+}
+
+.icon-smartphone {
   margin-right: 10px;
   fill: var(--primary-text-color);
 }
 
-.head-address-button {
-  display: block;
-  border: none;
-  background-color: var(--text-button);
-  color: var(--primary-text-color);
-  border-style: none;
-  padding: unset;
-  cursor: pointer;
-  outline: none;
-}
-.head-address-button:hover {
-  color: var(--accent-text-color);
-  fill: var(--accent-text-color);
-}
-
-.head-address-button:hover .head-address-icon {
-  fill: var(--accent-text-color);
+.icon-envelope {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
 }
 
 /*Оформление секции Hero*/
